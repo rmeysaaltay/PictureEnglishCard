@@ -42,6 +42,9 @@ android {
 }
 
 dependencies {
+
+    implementation("androidx.viewpager:viewpager:1.0.0")
+
     val nav_version = "2.7.7"
     implementation("androidx.activity:activity:1.9.2")
 
