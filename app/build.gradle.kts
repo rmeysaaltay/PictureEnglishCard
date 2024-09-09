@@ -43,6 +43,8 @@ android {
 
 dependencies {
 
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
     implementation("androidx.viewpager:viewpager:1.0.0")
 
     val nav_version = "2.7.7"

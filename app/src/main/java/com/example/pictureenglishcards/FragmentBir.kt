@@ -7,9 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pictureenglishcards.databinding.FragmentBirBinding
 
 
 class FragmentBir : Fragment() {
+    private lateinit var binding: FragmentBirBinding
+
+
+
 
 
     private lateinit var newRecyclerView: RecyclerView
@@ -19,9 +24,10 @@ class FragmentBir : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        binding = FragmentBirBinding.inflate(inflater, container, false)
+        return binding.root
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bir, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
