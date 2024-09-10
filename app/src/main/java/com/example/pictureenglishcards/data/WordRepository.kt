@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 
 class WordRepository(private val wordsDao: WordsDao) {
     val readAllData: LiveData<List<ClassData>> = wordsDao.readAllData()
-    suspend fun addWords(words:ClassData){
+    suspend fun addWords(words: Any){
         wordsDao.addWord(words)
     }
 

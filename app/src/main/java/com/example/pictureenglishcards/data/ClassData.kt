@@ -10,6 +10,8 @@ data class ClassData(
     val kelime: String,
     val kelimeAnlami: String,
     val cumle: String
-)
+) {
+
+}
 
 
