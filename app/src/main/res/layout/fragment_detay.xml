@@ -23,6 +23,19 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/cumle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="211dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kelimeAnlami" />
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/title_image"
         android:layout_width="146dp"
@@ -38,36 +51,49 @@
     <TextView
         android:id="@+id/kelime"
         android:layout_width="122dp"
-        android:layout_height="31dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginBottom="31dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="390dp" />
+        app:layout_constraintBottom_toTopOf="@+id/kelimeAnlami"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/kelimeAnlami"
         android:layout_width="132dp"
-        android:layout_height="20dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="29dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="452dp" />
+        app:layout_constraintBottom_toTopOf="@+id/cumle"
+        app:layout_constraintStart_toStartOf="@+id/kelime"
+        app:layout_constraintTop_toBottomOf="@+id/kelime" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="61dp"
-        android:layout_height="57dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="398dp"
         android:background="#161515"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-        tools:layout_editor_absoluteY="42dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
-    <TextView
-        android:id="@+id/cumle"
-        android:layout_width="223dp"
-        android:layout_height="36dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="510dp" />
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="181dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cumle"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/learned" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
