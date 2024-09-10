@@ -1,4 +1,4 @@
-package com.example.pictureenglishcards.recylerview
+package com.example.pictureenglishcards.data
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pictureenglishcards.R
-import com.example.pictureenglishcards.classData
 import com.google.android.material.imageview.ShapeableImageView
 
-class MyAdapter(private val newList: ArrayList<classData>) :
+class MyAdapter(private val newList: ArrayList<ClassData>) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     //private var _binding: MyA? = null
     //private val binding get() = _binding!!
