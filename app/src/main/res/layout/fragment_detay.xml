@@ -6,23 +6,6 @@
     android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="500dp"
-        android:layout_margin="16dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416"
-        tools:ignore="MissingConstraints">
-
-    </LinearLayout>
-
     <TextView
         android:id="@+id/cumle"
         android:layout_width="0dp"
@@ -87,8 +70,8 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="117dp"
+        android:layout_height="57dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="181dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.pictureenglishcards.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_fragmentBir"
+            app:destination="@id/fragmentBir" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBir"
+        android:name="com.example.pictureenglishcards.ui.word.WordViewFragment"
+        android:label="fragment_bir"
+        tools:layout="@layout/fragment_wordview" >
+        <action
+            android:id="@+id/action_fragmentBir_to_learnedFragment"
+            app:destination="@id/learnedFragment" />
+        <action
+            android:id="@+id/action_fragmentBir_to_detayFragment"
+            app:destination="@id/detayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learnedFragment"
+        android:name="com.example.pictureenglishcards.ui.learned.LearnedFragment"
+        android:label="fragment_learned"
+        tools:layout="@layout/fragment_learned" />
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.pictureenglishcards.ui.DetayFragment"
+        android:label="DetayFragment" />
+</navigation>

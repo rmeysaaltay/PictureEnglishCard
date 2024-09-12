@@ -1,17 +1,20 @@
-package com.example.pictureenglishcards.data
+package com.example.pictureenglishcards.model
 
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
-@Entity(tableName = "words")
+
+@Entity(tableName = "words", indices = [Index(value = ["kelime"], unique = true)])
 data class ClassData(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val titleImage: Int,
+    val titleImage: String?,
     val kelime: String,
     val kelimeAnlami: String,
     val cumle: String
 ) {
 
 }
+
 
 
