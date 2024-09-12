@@ -17,10 +17,13 @@ Word Details: Clicking on a word opens either a popup or a detail page. In Tab 2
 Data Storage: The app uses SharedPreferences to store which words you've learned, so your progress is saved even after closing the app.
 
 The Tech Behind It ⚙️
+
 RecyclerView / ViewPager: To display the word lists in a clean and flexible way.
 BottomNavigationView: For switching between the "Random Word List" and "Learned Words" sections.
 DataBinding / ViewBinding: To efficiently bind UI elements and keep the code cleaner.
 Jetpack Navigation: For smooth transitions between screens (and making the popups look great).
 SharedPreferences: For saving the "Learned" and "Unlearned" word states.
+
 How to run it 🚀
+
 Clone the repo, open it in Android Studio, and hit that “Run” button! 🎉 You're ready to start learning Turkish-English words!
