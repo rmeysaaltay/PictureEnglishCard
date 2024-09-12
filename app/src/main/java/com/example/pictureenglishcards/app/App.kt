@@ -1,4 +1,4 @@
-package com.example.pictureenglishcards.App
+package com.example.pictureenglishcards.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

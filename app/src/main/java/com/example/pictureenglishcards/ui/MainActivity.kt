@@ -1,10 +1,11 @@
-package com.example.pictureenglishcards
+package com.example.pictureenglishcards.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import com.example.pictureenglishcards.R
 import com.example.pictureenglishcards.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -18,7 +19,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        NavigationUI.setupWithNavController(
+            binding.bottomNavigationView,
+            navHostFragment.navController
+        )
 
 
     }
