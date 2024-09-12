@@ -1,28 +1,30 @@
-package com.example.pictureenglishcards.ui
+package com.example.pictureenglishcards.ui.detay
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.pictureenglishcards.R
+import androidx.navigation.fragment.navArgs
+import com.example.pictureenglishcards.databinding.FragmentDetayBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DetayFragment : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var binding: FragmentDetayBinding
+    val args: DetayFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detay, container, false)
+    ): View {
+        binding = FragmentDetayBinding.inflate(inflater, container, false)
+        return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val wordId = args.wordId
     }
 }
