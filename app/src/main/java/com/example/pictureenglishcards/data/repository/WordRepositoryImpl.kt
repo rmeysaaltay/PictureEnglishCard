@@ -19,4 +19,9 @@ class WordRepositoryImpl @Inject constructor(
         emit(wordsDao.readAllData())
 
     }
+
+    override suspend fun readData(id: Int): Flow<ClassData> = flow {
+        emit(wordsDao.readData(id))
+    }
+
 }

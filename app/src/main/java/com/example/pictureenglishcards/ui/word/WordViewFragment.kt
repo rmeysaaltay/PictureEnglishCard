@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pictureenglishcards.databinding.FragmentWordviewBinding
 import com.example.pictureenglishcards.ui.MyAdapter
@@ -15,8 +16,9 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class WordViewFragment : Fragment() {
+
     private lateinit var binding: FragmentWordviewBinding
-    private val adapter by lazy { MyAdapter(arrayListOf()) }
+    private val adapter by lazy { MyAdapter(arrayListOf(),::onItemClick) }
     private val viewModel by viewModels<WordViewModel>()
 
     override fun onCreateView(
@@ -35,18 +37,21 @@ class WordViewFragment : Fragment() {
         livedataObserver()
 
 
+
     }
 
     private fun livedataObserver() {
         lifecycleScope.launchWhenStarted {
-            viewModel._wordList.collect{ state ->
-                when(state){
+            viewModel._wordList.collect { state ->
+                when (state) {
                     is UiState.Error -> {
                         println(state.error.message)
                     }
+
                     UiState.Loading -> {
                         println("loading")
                     }
+
                     is UiState.Success -> {
                         adapter.update(state.result)
                     }
@@ -55,9 +60,15 @@ class WordViewFragment : Fragment() {
         }
     }
 
+    private fun onItemClick(id: Int){
+        val action= WordViewFragmentDirections.actionFragmentBirToDetayFragment(wordId =id)
+        findNavController().navigate(action)
+
+    }
+
     private fun setupRecyclerView() {
         binding.recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        binding.recyclerView.adapter=adapter
+        binding.recyclerView.adapter = adapter
     }
 }

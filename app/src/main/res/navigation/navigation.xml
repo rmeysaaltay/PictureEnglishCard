@@ -32,7 +32,12 @@
         android:label="fragment_learned"
         tools:layout="@layout/fragment_learned" />
     <fragment
+        tools:layout="@layout/fragment_detay"
         android:id="@+id/detayFragment"
-        android:name="com.example.pictureenglishcards.ui.DetayFragment"
-        android:label="DetayFragment" />
+        android:name="com.example.pictureenglishcards.ui.detay.DetayFragment"
+        android:label="DetayFragment" >
+        <argument
+            android:name="wordId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

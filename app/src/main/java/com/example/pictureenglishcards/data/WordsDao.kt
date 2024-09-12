@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.pictureenglishcards.model.ClassData
+import kotlinx.coroutines.flow.Flow
 
 
 @Dao
@@ -17,5 +18,6 @@ interface WordsDao {
     @Query("SELECT * FROM words")
     suspend fun readAllData(): List<ClassData>
 
-
+    @Query("SELECT * FROM words WHERE id=:id")
+    suspend fun readData(id: Int): ClassData
 }

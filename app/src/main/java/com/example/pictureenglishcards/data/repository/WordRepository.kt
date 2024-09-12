@@ -10,4 +10,6 @@ interface WordRepository {
 
     suspend fun readAllData(): Flow<List<ClassData>>
 
+    suspend fun readData(id: Int): Flow<ClassData>
+
 }

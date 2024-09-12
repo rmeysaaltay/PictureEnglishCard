@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class ClassData(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val titleImage: String?,
+    val titleImage: Int?,
     val kelime: String,
     val kelimeAnlami: String,
     val cumle: String

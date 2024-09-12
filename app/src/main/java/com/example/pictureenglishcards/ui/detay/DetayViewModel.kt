@@ -1,4 +1,4 @@
-package com.example.pictureenglishcards.ui
+package com.example.pictureenglishcards.ui.detay
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -14,23 +14,24 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class Detayviewmodel @Inject constructor(
+class DetayViewModel @Inject constructor(
     private val repository: WordRepository
 ) : ViewModel() {
-    private val data = MutableStateFlow<UiState<List<ClassData>>>(UiState.Loading)
+    private val data = MutableStateFlow<UiState<ClassData>>(UiState.Loading)
     val _data get() = data.asStateFlow()
     fun readData(id: Int) = viewModelScope.launch {
 
         repository.readData(id)
             .onStart {
-            data.emit(UiState.Loading)
-        }
+                data.emit(UiState.Loading)
+            }
             .catch {
-            data.emit(UiState.Error(it))
-        }
+                data.emit(UiState.Error(it))
+            }
             .collect {
-          data.emit(UiState.Success(it))
-        }
+                println(it)
+                data.emit(UiState.Success(it))
+            }
     }
 
 }
