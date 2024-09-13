@@ -1,4 +1,3 @@
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -43,7 +42,9 @@ android {
 }
 
 dependencies {
-
+    dependencies {
+        implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+    }
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.android)
 
@@ -55,7 +56,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     implementation(libs.androidx.room.ktx)
-    ksp (libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

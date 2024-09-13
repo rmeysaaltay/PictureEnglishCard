@@ -94,7 +94,7 @@ class SplashViewModel @Inject constructor(
             titleImage = "important",
             kelime = "difficult",
             kelimeAnlami = "zor",
-            cumle = ""
+            cumle = "That's difficult for me."
         )
         val w14 = ClassData(
             titleImage ="important" ,

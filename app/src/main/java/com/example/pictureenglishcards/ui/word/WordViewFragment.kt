@@ -36,7 +36,7 @@ class WordViewFragment : Fragment() {
         viewModel.readAllData()
         setupRecyclerView()
         livedataObserver()
-
+        setupSwipeRefreshLayout()
 
 
     }
@@ -47,6 +47,7 @@ class WordViewFragment : Fragment() {
                 when (state) {
                     is UiState.Error -> {
                         println(state.error.message)
+                        binding.swiperefresh.isRefreshing=false
                     }
 
                     UiState.Loading -> {
@@ -55,6 +56,7 @@ class WordViewFragment : Fragment() {
 
                     is UiState.Success -> {
                         adapter.update(state.result)
+                        binding.swiperefresh.isRefreshing=false
                     }
                 }
             }
@@ -71,6 +73,12 @@ class WordViewFragment : Fragment() {
         binding.recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.recyclerView.adapter = adapter
+    }
+    private fun setupSwipeRefreshLayout() {
+        binding.swiperefresh.setOnRefreshListener {
+            viewModel.readAllData()
+            binding.swiperefresh.isRefreshing=false
+        }
     }
 
 }
