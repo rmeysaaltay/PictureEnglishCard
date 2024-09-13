@@ -19,6 +19,10 @@ class DetayViewModel @Inject constructor(
 ) : ViewModel() {
     private val data = MutableStateFlow<UiState<ClassData>>(UiState.Loading)
     val _data get() = data.asStateFlow()
+    private val learn = MutableStateFlow<UiState<Unit>>(UiState.Loading)
+    val _learn get() = learn.asStateFlow()
+
+
     fun readData(id: Int) = viewModelScope.launch {
 
         repository.readData(id)
@@ -34,4 +38,23 @@ class DetayViewModel @Inject constructor(
             }
     }
 
+    fun updateData(id: Int, learnn: Boolean) = viewModelScope.launch {
+        val number = if (learnn) {
+            1
+        } else {
+            0
+        }
+        repository.updateData(id, number)
+            .onStart {
+                learn.emit(UiState.Loading)
+            }
+            .catch {
+                learn.emit(UiState.Error(it))
+            }
+            .collect {
+                println(it)
+                learn.emit(UiState.Success(it))
+
+            }
+    }
 }

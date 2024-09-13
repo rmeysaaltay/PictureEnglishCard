@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.example.pictureenglishcards.model.ClassData
 
 
-@Database(entities = [ClassData::class], version = 2)
+@Database(entities = [ClassData::class], version = 3)
 abstract class WordsDatabase : RoomDatabase() {
     abstract fun WordsDao(): WordsDao
 

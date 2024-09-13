@@ -1,5 +1,6 @@
 package com.example.pictureenglishcards.ui.word
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -71,4 +72,5 @@ class WordViewFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.recyclerView.adapter = adapter
     }
+
 }

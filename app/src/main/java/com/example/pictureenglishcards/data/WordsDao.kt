@@ -15,9 +15,14 @@ interface WordsDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addWord(kelime: List<ClassData>)
 
-    @Query("SELECT * FROM words")
+    @Query("SELECT * FROM words ORDER BY RANDOM()")
     suspend fun readAllData(): List<ClassData>
 
     @Query("SELECT * FROM words WHERE id=:id")
     suspend fun readData(id: Int): ClassData
+
+   @Query("UPDATE words SET learn = :learn WHERE id = :id")
+   suspend fun updateData(id:Int,learn: Int)
+
+
 }

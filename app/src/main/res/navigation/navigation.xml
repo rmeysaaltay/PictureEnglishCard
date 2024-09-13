@@ -30,7 +30,11 @@
         android:id="@+id/learnedFragment"
         android:name="com.example.pictureenglishcards.ui.learned.LearnedFragment"
         android:label="fragment_learned"
-        tools:layout="@layout/fragment_learned" />
+        tools:layout="@layout/fragment_learned" >
+        <action
+            android:id="@+id/action_learnedFragment_to_detayFragment"
+            app:destination="@id/detayFragment" />
+    </fragment>
     <fragment
         tools:layout="@layout/fragment_detay"
         android:id="@+id/detayFragment"

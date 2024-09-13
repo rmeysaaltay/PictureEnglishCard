@@ -1,6 +1,5 @@
-package com.example.pictureenglishcards.ui.word
+package com.example.pictureenglishcards.ui.learned
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pictureenglishcards.data.repository.WordRepository
@@ -15,7 +14,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class WordViewModel @Inject constructor(
+class LearnedViewModel @Inject constructor(
     private val repository: WordRepository
 ) : ViewModel() {
     private val wordList = MutableStateFlow<UiState<List<ClassData>>>(UiState.Loading)
@@ -27,13 +26,9 @@ class WordViewModel @Inject constructor(
         }.catch { wordList.emit(UiState.Error(it)) }
             .collect {
                 val filter= it.filter {
-                    !it.learn }
-            wordList.emit(UiState.Success(filter))
-        }
+                    it.learn
+                }
+                wordList.emit(UiState.Success(filter))
+            }
     }
-
-
-
-
 }
-

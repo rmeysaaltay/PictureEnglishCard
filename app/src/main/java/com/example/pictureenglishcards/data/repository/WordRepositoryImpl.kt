@@ -24,4 +24,7 @@ class WordRepositoryImpl @Inject constructor(
         emit(wordsDao.readData(id))
     }
 
+    override suspend fun updateData(id: Int, learn: Int): Flow<Unit> = flow {
+        emit(wordsDao.updateData(id, learn))
+    }
 }

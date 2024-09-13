@@ -8,10 +8,11 @@ import androidx.room.PrimaryKey
 data class ClassData(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val titleImage: Int?,
+    val titleImage: String?,
     val kelime: String,
     val kelimeAnlami: String,
-    val cumle: String
+    val cumle: String,
+    val learn: Boolean=false
 ) {
 
 }
