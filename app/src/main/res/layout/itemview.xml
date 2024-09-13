@@ -6,12 +6,13 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:background="#73C5CE"
-    app:cardBackgroundColor="#75B7BD">
+    app:cardBackgroundColor="#75B7BD"
+    app:cardCornerRadius="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1F7C24"
+        android:background="#497A4C"
         android:padding="25dp">
 
         <TextView
@@ -19,6 +20,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
