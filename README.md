@@ -30,17 +30,13 @@ How to run it 🚀
 Clone the repo, open it in Android Studio, and hit that “Run” button! 🎉 You're ready to start learning Turkish-English words!
 
 
-SPLASH SCREEN!
-![WhatsApp Görsel 2024-09-13 saat 23 31 03_f4ddbdad](https://github.com/user-attachments/assets/8c77c99a-44f4-4598-95df-74d6548ad4f5)
+| Ekran Adı       | Görsel                                                                                                                                                              |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Splash Screen   | ![WhatsApp Görsel 2024-09-13 saat 23 31 03_f4ddbdad](https://github.com/user-attachments/assets/8c77c99a-44f4-4598-95df-74d6548ad4f5)                                |
+| First Screen    | ![WhatsApp Görsel 2024-09-13 saat 23 30 52_0b5f3263](https://github.com/user-attachments/assets/ede3b4b4-3f60-4392-936a-8bb5642fcf59)                                |
+| Learned Screen  | ![WhatsApp Görsel 2024-09-13 saat 23 30 52_142ebd2d](https://github.com/user-attachments/assets/c060666b-0885-4a97-ac08-ad69e8582c5a)                                |
+| Detail Screen   | ![WhatsApp Görsel 2024-09-13 saat 23 30 52_532f7ac4](https://github.com/user-attachments/assets/f353efb6-3798-403a-a7a9-aaa332f3971e)                                |
 
-FIRST SCREEN!
-![WhatsApp Görsel 2024-09-13 saat 23 30 52_0b5f3263](https://github.com/user-attachments/assets/ede3b4b4-3f60-4392-936a-8bb5642fcf59)
-
-LEARNED SCREEN!
-![WhatsApp Görsel 2024-09-13 saat 23 30 52_142ebd2d](https://github.com/user-attachments/assets/c060666b-0885-4a97-ac08-ad69e8582c5a)
-
-DETAIL SCREEN!
-![WhatsApp Görsel 2024-09-13 saat 23 30 52_532f7ac4](https://github.com/user-attachments/assets/f353efb6-3798-403a-a7a9-aaa332f3971e)
 
 
 
