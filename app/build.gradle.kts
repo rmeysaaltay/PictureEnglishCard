@@ -54,9 +54,11 @@ dependencies {
     implementation("com.airbnb.android:lottie:5.0.3")
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-
-    implementation(libs.androidx.room.ktx)
+   implementation("androidx.room:room-runtime:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
     ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
